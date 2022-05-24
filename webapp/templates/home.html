@@ -1,0 +1,16 @@
+{% extends 'userBase.html' %}
+
+{%block content%}
+<b>UserName:</b> {{name}}
+<br>
+<b>HusbandName:</b>{{husband}}
+<br>
+<form action="shape" method='post'>
+   {% csrf_token %}
+    Enter forehead length: <input type="text" name="forehead"><br>
+    Enter chin length: <input type="text" name="chin"><br>
+    Enter jaw length: <input type="text" name="jaw"><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
