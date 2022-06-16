@@ -1,5 +1,6 @@
-{% load static %}
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
   <head>
@@ -13,7 +14,7 @@
     <title>Pixie - Ecommerce HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css " rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
@@ -54,13 +55,13 @@ https://www.tooplate.com/view/2114-pixie
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link" href="{% url 'products' %}">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="{% url 'about' %}">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -254,7 +255,7 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
+              <p>Copyright &copy; Budget .inc
                 
                 - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
             </div>
@@ -266,13 +267,13 @@ https://www.tooplate.com/view/2114-pixie
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="{% static'js/custom.js"></script>
-    <script src="{% static'js/owl.js"></script>
+    <script src="static/js/custom.js"></script>
+    <script src="static/js/owl.js"></script>
 
 
     <script language = "text/Javascript"> 
