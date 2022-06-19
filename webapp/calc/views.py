@@ -40,4 +40,4 @@ def about(request):
 
 
 def single(request):
-    return render(request, 'single-product.html')
+    return render(request, 'single.html')
