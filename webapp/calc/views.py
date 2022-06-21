@@ -1,34 +1,18 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Products
 
 
 # Create your views here.
-def home(request):
-    return render(request, 'index.html', {'name': 'shakira', 'husband': 'Pique'})
-
-
-def shape(request):
-    forehead = int(request.POST["forehead"])
-    chin = int(request.POST["chin"])
-    jaw = int(request.POST["jaw"])
-    res = 'no shape'
-
-    if jaw < forehead > chin:
-        res = 'triangle'
-    if jaw < chin > forehead:
-        res = 'diamond'
-    if jaw == forehead == chin:
-        res = 'square'
-
-    return render(request, 'shape.html', {'shape': res})
-
 
 def index(request):
-    return render(request, 'index.html')
+    imgs = Products.objects.all()
+    return render(request, 'index.html', {'imgs': imgs})
 
 
 def products(request):
-    return render(request, 'products.html')
+    prods = Products.objects.all()
+    return render(request, 'products.html', {'prods': prods})
 
 
 def contact(request):
