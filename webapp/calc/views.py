@@ -1,17 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Products
+from .models import Items
 
 
 # Create your views here.
 
 def index(request):
     imgs = Products.objects.all()
+    
     return render(request, 'index.html', {'imgs': imgs})
 
 
 def products(request):
-    prods = Products.objects.all()
+    prods = Items.objects.all()
     return render(request, 'products.html', {'prods': prods})
 
 
