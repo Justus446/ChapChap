@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Products
-from .models import Items
+from .models import Product
+from .models import Item
 
 # Register your models here.
-admin.site.register(Products)
-admin.site.register(Items)
+admin.site.register(Product)
+admin.site.register(Item)

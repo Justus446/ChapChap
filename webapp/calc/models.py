@@ -2,13 +2,13 @@ from django.db import models
 
 
 # Create your models here.
-class Products(models.Model):
-    img = models.ImageField(upload_to='images')
+class Product(models.Model):
+    img = models.ImageField(upload_to='pics')
     desc = models.TextField()
     price = models.IntegerField()
 
 
-class Items(models.Model):
-    img = models.ImageField(upload_to='images')
+class Item(models.Model):
+    img = models.ImageField(upload_to='pics')
     desc = models.TextField()
     price = models.IntegerField()
