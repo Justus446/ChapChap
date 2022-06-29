@@ -104,7 +104,7 @@ https://www.tooplate.com/view/2114-Budget
             <div class="owl-carousel owl-theme">
 
               {%  for img in imgs %}
-              <a href="single.html">
+              <a href="{% url 'single' %}">
                 <div class="featured-item">
                   <img src="{{img.img.url}}" alt="Item 1">
                   <h4>{{img.desc}}</h4>
