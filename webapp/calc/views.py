@@ -7,14 +7,14 @@ from .models import Item
 # Create your views here.
 
 def index(request):
-    imgs = Product.objects.all()
+    prods = Product.objects.all()
     
-    return render(request, 'index.html', {'imgs': imgs})
+    return render(request, 'index.html', {'prods': prods})
 
 
 def products(request):
-    prods = Item.objects.all()
-    return render(request, 'products.html', {'prods': prods})
+    items = Item.objects.all()
+    return render(request, 'products.html', {'items': items})
 
 
 def contact(request):
@@ -26,4 +26,5 @@ def about(request):
 
 
 def single(request):
-    return render(request, 'single.html')
+    items = Item.objects.all()
+    return render(request, 'single.html', {'items': items})

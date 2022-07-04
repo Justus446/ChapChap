@@ -103,12 +103,12 @@ https://www.tooplate.com/view/2114-ChapChap
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
 
-              {%  for img in imgs %}
+              {%  for prod in prods %}
               <a href="{% url 'single' %}">
                 <div class="featured-item">
-                  <img src="{{img.img.url}}" alt="Item 1">
-                  <h4>{{img.desc}}</h4>
-                  <h6>{{img.price}}</h6>
+                  <img src="{{prod.img.url}}" alt="Item 1">
+                  <h4>{{prod.name}}</h4>
+                  <h6>{{prod.price}}</h6>
                 </div>
               </a>
               {% endfor %}
