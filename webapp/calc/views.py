@@ -28,3 +28,7 @@ def about(request):
 def single(request):
     items = Item.objects.all()
     return render(request, 'single.html', {'items': items})
+
+
+def signup(request):
+    return render(request, 'signup.html')
